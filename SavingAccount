@@ -1,0 +1,15 @@
+public class SavingAccount extends BankAccount{
+    private int termMonths;
+
+    public SavingAccount(String id, double balance, int termMonths) {
+        super(id, balance);
+        this.termMonths = termMonths;
+    }
+    public int getTermMonths() {
+        return termMonths;
+    }
+    @Override
+    public double calculateAnnualInterest(){
+        return getBalance() * 0.068;
+    }
+}
