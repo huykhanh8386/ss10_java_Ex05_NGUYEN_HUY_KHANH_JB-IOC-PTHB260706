@@ -1,0 +1,18 @@
+public class main {
+    public static void main(String[] args) {
+        BankAccount normalAccount = new BankAccount("ACC001", 50000000);
+        SavingAccount savingsAccount = new SavingAccount("SAV001", 50000000, 12);
+        System.out.println("===== SO SÁNH LÃI SUẤT 2 LOẠI TÀI KHOẢN =====");
+        System.out.println("\n--- TÀI KHOẢN THƯỜNG ---");
+        System.out.println("Mã tài khoản: " + normalAccount.getId());
+        System.out.printf("Số dư: %,.0f VNĐ%n", normalAccount.getBalance());
+        System.out.println("Lãi suất: 1.2% / năm");
+        System.out.printf("Tiền lãi 1 năm: %,.0f VNĐ%n", normalAccount.calculateAnnualInterest());
+        System.out.println("--- TÀI KHOẢN TIẾT KIỆM ---");
+        System.out.println("Mã tài khoản: " + savingsAccount.getId());
+        System.out.printf("Số dư: %,.0f VNĐ%n", savingsAccount.getBalance());
+        System.out.println("Kỳ hạn: " + savingsAccount.getTermMonths() + " tháng");
+        System.out.println("Lãi suất: 6.8% / năm");
+        System.out.printf("Tiền lãi 1 năm: %,.0f VNĐ%n", savingsAccount.calculateAnnualInterest());
+    }
+}
